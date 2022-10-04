@@ -18,14 +18,12 @@ public class Lab04avst
         double denominator = Math.pow(1+monthlyRate,numMonths) - 1;
 
 
-
-
-
         System.out.println("Principal: \t\t " + principal);
         System.out.println("Annual Rate: \t " + annualRate);
         System.out.println("Number of years: " + numYears);
-        System.out.println("Monthly Payment: " + numerator/denominator * principal );
+        System.out.println("Monthly Payment: " + Math.round(numerator/denominator * principal) );
         System.out.println("Total Payments   " + (numerator/denominator * principal) * numMonths);
+        System.out.println("Total Interest   " + ( (numerator/denominator * principal)*numMonths - principal));
 
     }
 }
